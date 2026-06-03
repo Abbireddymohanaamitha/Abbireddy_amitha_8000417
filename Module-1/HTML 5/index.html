@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Community Event Portal</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f4f8fb;
+      color: #1e293b;
+    }
+
+    header, nav, main, footer {
+      margin: 0 auto;
+      width: min(1100px, calc(100% - 2rem));
+    }
+
+    header {
+      padding: 1rem 0 0;
+    }
+
+    nav {
+      background: #0f172a;
+      padding: 0.85rem 1rem;
+      border-radius: 999px;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 1rem;
+      font-weight: 700;
+    }
+
+    #welcomeBanner {
+      background: #2563eb;
+      color: #fff;
+      padding: 1.2rem;
+      border-radius: 18px;
+      margin: 1.2rem auto;
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+    }
+
+    .highlight {
+      background: #fde68a;
+      padding: 0.1rem 0.35rem;
+      border-radius: 6px;
+      color: #111827;
+    }
+
+    section {
+      padding: 1.4rem 0 1rem;
+    }
+
+    .gallery-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .gallery-table td {
+      padding: 0.8rem;
+      text-align: center;
+      vertical-align: top;
+    }
+
+    .event-image {
+      width: 180px;
+      height: 120px;
+      border: 3px solid #0f172a;
+      border-radius: 12px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .event-image.enlarged {
+      width: 320px;
+      height: 220px;
+    }
+
+    .form-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    }
+
+    form label {
+      display: block;
+      margin-top: 0.9rem;
+      font-weight: 700;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      margin-top: 0.35rem;
+      padding: 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      box-sizing: border-box;
+      font: inherit;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 0.8rem 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .primary-btn {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .secondary-btn {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .status {
+      margin-top: 0.75rem;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      background: #ecfeff;
+      border: 1px solid #67e8f9;
+    }
+
+    footer {
+      padding: 1.2rem 0 2rem;
+      color: #475569;
+    }
+
+    .flex-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .video-box {
+      background: #0f172a;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 16px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 0.75rem;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        border-radius: 1rem;
+      }
+
+      .gallery-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .event-image {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Local Community Event Portal</h1>
+    <p>Explore events, register for local services, and stay informed about community updates.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+    <a href="help.html" target="_blank">Help</a>
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <section id="home">
+      <div id="welcomeBanner">
+        <h2>Welcome, community member!</h2>
+        <p>Today’s featured offer: <span style="color: #fef2f2; font-weight: bold;">Free parking at the downtown market</span>.</p>
+        <p>Use the <span class="highlight">Events</span> section to browse upcoming community activities and the <span class="highlight">Contact</span> section to reach out.</p>
+      </div>
+    </section>
+
+    <section id="events">
+      <h2>Community Event Gallery</h2>
+      <p>Browse recent events and tap or double-click an image to enlarge it.</p>
+      <table class="gallery-table">
+        <caption>Recent neighborhood events, workshops, and celebrations.</caption>
+        <tr>
+          <td>
+            <img class="event-image" src="assets/community-event.svg" alt="Town hall meeting" title="Town Hall Meeting" ondblclick="toggleImageSize(this)">
+            <p><strong>Town Hall Meeting</strong></p>
+          </td>
+          <td>
+            <img class="event-image" src="assets/community-event.svg" alt="Farmers market" title="Farmers Market" ondblclick="toggleImageSize(this)">
+            <p><strong>Farmers Market</strong></p>
+          </td>
+          <td>
+            <img class="event-image" src="assets/community-event.svg" alt="Cleanup drive" title="Cleanup Drive" ondblclick="toggleImageSize(this)">
+            <p><strong>Cleanup Drive</strong></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img class="event-image" src="assets/community-event.svg" alt="Library workshop" title="Library Workshop" ondblclick="toggleImageSize(this)">
+            <p><strong>Library Workshop</strong></p>
+          </td>
+          <td>
+            <img class="event-image" src="assets/community-event.svg" alt="Arts and crafts fair" title="Arts & Crafts Fair" ondblclick="toggleImageSize(this)">
+            <p><strong>Arts & Crafts Fair</strong></p>
+          </td>
+          <td>
+            <img class="event-image" src="assets/community-event.svg" alt="Festival parade" title="Festival Parade" ondblclick="toggleImageSize(this)">
+            <p><strong>Festival Parade</strong></p>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Register for an Event</h2>
+      <div class="flex-grid">
+        <div class="form-card">
+          <form id="eventForm">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your full name" required autofocus>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="name@example.com" required>
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="555-123-4567" onblur="validatePhone(this)">
+
+            <label for="eventDate">Preferred Date</label>
+            <input id="eventDate" name="eventDate" type="date" required>
+
+            <label for="eventType">Event Type</label>
+            <select id="eventType" name="eventType" onchange="updateFee(this)">
+              <option value="Community Fair">Community Fair - $10</option>
+              <option value="Volunteer Day">Volunteer Day - $0</option>
+              <option value="Tech Meetup">Tech Meetup - $15</option>
+              <option value="Family Picnic">Family Picnic - $5</option>
+            </select>
+
+            <p id="eventFee" class="status">Selected fee: $10</p>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Share anything the organizers should know"></textarea>
+
+            <div class="actions">
+              <button type="submit" class="primary-btn" onclick="showConfirmation(event)">Register</button>
+              <button type="button" class="secondary-btn" onclick="clearPreferences()">Clear Preferences</button>
+            </div>
+
+            <output id="confirmation" class="status" aria-live="polite">Your registration details will appear here after submission.</output>
+          </form>
+        </div>
+
+        <div>
+          <h3>Feedback</h3>
+          <p>Use the feedback box to type notes. The character count updates as you type.</p>
+          <textarea id="feedbackArea" rows="6" placeholder="Share your feedback in real time" onkeydown="countChars()" onkeyup="countChars()"></textarea>
+          <p id="charCount" class="status">Characters: 0</p>
+
+          <h3>Location</h3>
+          <button type="button" class="primary-btn" onclick="findNearbyEvents()">Find Nearby Events</button>
+          <p id="geoOutput" class="status">Coordinates will appear here.</p>
+
+          <h3>Saved Preference</h3>
+          <p id="savedPreference" class="status">No saved preference yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="flex-grid">
+      <div>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:events@localportal.gov">events@localportal.gov</a></p>
+        <p>Phone: (555) 010-2026</p>
+        <p>Hours: Monday to Friday, 9 AM to 5 PM</p>
+      </div>
+
+      <div class="video-box">
+        <h2>Event Promo Video</h2>
+        <p id="videoStatus">Video not loaded yet.</p>
+        <video controls oncanplay="document.getElementById('videoStatus').textContent = 'Video ready to play'">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Local Community Event Portal. Designed for browser-based community services.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('eventForm');
+    const confirmation = document.getElementById('confirmation');
+    const feedbackArea = document.getElementById('feedbackArea');
+    const charCount = document.getElementById('charCount');
+    const geoOutput = document.getElementById('geoOutput');
+    const savedPreference = document.getElementById('savedPreference');
+
+    let formDirty = false;
+
+    function markDirty() {
+      formDirty = true;
+    }
+
+    form.addEventListener('input', markDirty);
+    form.addEventListener('change', markDirty);
+
+    window.addEventListener('beforeunload', function (event) {
+      if (formDirty) {
+        event.preventDefault();
+        event.returnValue = 'You have unsaved changes on the form. Are you sure you want to leave?';
+      }
+    });
+
+    function validatePhone(input) {
+      const valid = /^\d{3}-\d{3}-\d{4}$/.test(input.value) || input.value === '';
+      input.style.borderColor = valid ? '#94a3b8' : '#dc2626';
+      if (!valid) {
+        confirmation.textContent = 'Please enter the phone number in the format 555-123-4567.';
+      }
+    }
+
+    function updateFee(select) {
+      const feeMap = {
+        'Community Fair': '$10',
+        'Volunteer Day': '$0',
+        'Tech Meetup': '$15',
+        'Family Picnic': '$5'
+      };
+      document.getElementById('eventFee').textContent = 'Selected fee: ' + feeMap[select.value];
+      const chosenEvent = select.value;
+      localStorage.setItem('preferredEventType', chosenEvent);
+      sessionStorage.setItem('preferredEventTypeSession', chosenEvent);
+      savedPreference.textContent = 'Saved preference: ' + chosenEvent;
+      console.log('Saved event preference:', chosenEvent);
+    }
+
+    function showConfirmation(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      confirmation.textContent = 'Thanks ' + (name || 'community member') + '! Your registration is confirmed.';
+      formDirty = false;
+      console.log('Registration submitted for:', name || 'anonymous');
+    }
+
+    function toggleImageSize(image) {
+      image.classList.toggle('enlarged');
+      console.log('Toggled image size for:', image.title);
+    }
+
+    function countChars() {
+      charCount.textContent = 'Characters: ' + feedbackArea.value.length;
+      console.log('Feedback length:', feedbackArea.value.length);
+    }
+
+    function findNearbyEvents() {
+      const options = {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      };
+
+      navigator.geolocation.getCurrentPosition(function (position) {
+        const lat = position.coords.latitude.toFixed(4);
+        const lon = position.coords.longitude.toFixed(4);
+        geoOutput.textContent = 'Your coordinates: ' + lat + ', ' + lon + '. Nearby events are being matched.';
+        console.log('Geolocation success:', lat, lon);
+      }, function (error) {
+        if (error.code === error.PERMISSION_DENIED) {
+          geoOutput.textContent = 'Location access was denied. Enable it to find nearby events.';
+        } else if (error.code === error.TIMEOUT) {
+          geoOutput.textContent = 'Location request timed out. Please try again.';
+        } else {
+          geoOutput.textContent = 'Unable to detect your location right now.';
+        }
+        console.error('Geolocation error:', error.message);
+      }, options);
+    }
+
+    function clearPreferences() {
+      localStorage.removeItem('preferredEventType');
+      sessionStorage.removeItem('preferredEventTypeSession');
+      savedPreference.textContent = 'No saved preference yet.';
+      const select = document.getElementById('eventType');
+      select.selectedIndex = 0;
+      document.getElementById('eventFee').textContent = 'Selected fee: $10';
+      confirmation.textContent = 'Preferences cleared.';
+      console.log('Preferences cleared');
+    }
+
+    function restoreSavedPreference() {
+      const preferred = localStorage.getItem('preferredEventType');
+      if (preferred) {
+        const select = document.getElementById('eventType');
+        select.value = preferred;
+        document.getElementById('eventFee').textContent = 'Selected fee: ' + (preferred === 'Community Fair' ? '$10' : preferred === 'Volunteer Day' ? '$0' : preferred === 'Tech Meetup' ? '$15' : '$5');
+        savedPreference.textContent = 'Saved preference: ' + preferred;
+      }
+    }
+
+    restoreSavedPreference();
+    countChars();
+    console.log('Portal script loaded successfully.');
+  </script>
+</body>
+</html>
