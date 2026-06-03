@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for local community events using a modern form with validation and local storage.">
+  <title>Register - Local Community Event Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__wrapper">
+      <a href="index.html" class="brand">Event Portal</a>
+      <button class="menu-toggle" id="menuToggleRegister" aria-expanded="false" aria-controls="mainNavRegister">Menu</button>
+      <nav class="main-nav" id="mainNavRegister">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggleRegister">Theme</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container form-section" aria-labelledby="registerTitle">
+      <h1 id="registerTitle">Event Registration</h1>
+      <p>Complete the form to join an upcoming community event. Required fields are marked with <span aria-hidden="true">*</span>.</p>
+      <form id="registrationForm" class="form-card" onsubmit="return validateRegistration()" novalidate>
+        <div class="form-group">
+          <label for="fullName">Full Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="fullName" name="fullName" required placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="name@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password <span aria-hidden="true">*</span></label>
+          <input type="password" id="password" name="password" required minlength="8" placeholder="Create a password">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+          <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="1234567890">
+        </div>
+
+        <div class="form-group">
+          <label for="eventDate">Event Date</label>
+          <input type="date" id="eventDate" name="eventDate">
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Event Type</legend>
+          <label><input type="radio" name="eventType" value="community" checked> Community</label>
+          <label><input type="radio" name="eventType" value="volunteer"> Volunteer</label>
+          <label><input type="radio" name="eventType" value="music"> Music</label>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>Interests</legend>
+          <label><input type="checkbox" name="interests" value="workshops"> Workshops</label>
+          <label><input type="checkbox" name="interests" value="fitness"> Fitness</label>
+          <label><input type="checkbox" name="interests" value="arts"> Arts</label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="tickets">Tickets Needed</label>
+          <input type="number" id="tickets" name="tickets" min="1" max="10" value="1">
+        </div>
+
+        <div class="form-group">
+          <label for="locationSelect">Preferred Location</label>
+          <select id="locationSelect" name="location">
+            <option value="communityCenter">Community Center</option>
+            <option value="riverPark">River Park</option>
+            <option value="urbanGarden">Urban Garden</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Additional Comments</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Tell us about your interests"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Submit Registration</button>
+          <button type="reset" class="btn btn--secondary">Reset Form</button>
+        </div>
+
+        <p id="registrationMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__wrapper">
+      <p>Register today to become part of the local event community.</p>
+    </div>
+  </footer>
+
+  <script src="js/validation.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

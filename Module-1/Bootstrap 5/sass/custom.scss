@@ -1,0 +1,23 @@
+// Additional custom Sass rules for the practice project
+
+$brand-gradient: linear-gradient(135deg, #4f46e5, #0ea5e9);
+
+.hero-gradient {
+  background: $brand-gradient;
+}
+
+.section-card {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.btn-theme {
+  @extend .btn;
+  background: rgba(79, 70, 229, 0.1);
+  border: 1px solid rgba(79, 70, 229, 0.18);
+  color: #4f46e5;
+}
+
+.btn-theme:hover {
+  background: rgba(79, 70, 229, 0.2);
+}

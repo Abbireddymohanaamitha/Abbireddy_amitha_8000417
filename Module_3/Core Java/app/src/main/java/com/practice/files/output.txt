@@ -1,0 +1,2 @@
+Java Master Practice Project output file.
+This file is created by FileWriterDemo.

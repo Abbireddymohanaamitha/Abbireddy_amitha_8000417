@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sass Customization | Bootstrap 5 Master Practice Project</title>
+  <meta name="description" content="Bootstrap Sass customization and local Bootstrap setup.">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="index.html">Bootstrap5 Master</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sassNavbar" aria-controls="sassNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="sassNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="sass-customization.html">Sass</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="plugins.html">Plugins</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <p class="section-heading text-primary mb-2">Sass Customization</p>
+          <h1 class="fw-bold">Customize Bootstrap with Sass variables and local build setup</h1>
+          <p class="text-muted">Use npm, Sass, and Bootstrap source files to adjust colors, border radius, and button styling.</p>
+        </div>
+      </div>
+
+      <section class="card shadow-soft p-4 mb-5">
+        <h2 class="h5 fw-bold mb-3">Setup with npm</h2>
+        <p class="text-muted">This project includes a local `package.json` and `node_modules` folder for Bootstrap and Sass.</p>
+        <div class="bg-light rounded-4 p-4">
+          <p class="mb-2"><strong>Install dependencies:</strong></p>
+          <pre class="p-3 bg-white rounded-3">npm install</pre>
+          <p class="mb-2"><strong>Compile Sass:</strong></p>
+          <pre class="p-3 bg-white rounded-3">npm run build:css</pre>
+          <p class="mb-2"><strong>Watch changes:</strong></p>
+          <pre class="p-3 bg-white rounded-3">npm run watch:css</pre>
+        </div>
+      </section>
+
+      <section class="row g-4 mb-5">
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Variables file</h2>
+            <p class="text-muted">Modify `sass/_variables.scss` to change your theme palette and global Bootstrap variables.</p>
+            <pre class="p-3 bg-light rounded-4"><code>$primary: #4f46e5;
+$secondary: #0f766e;
+$body-bg: #f8fafc;
+$border-radius: 1rem;
+$btn-border-radius: 2rem;</code></pre>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Bootstrap source import</h2>
+            <p class="text-muted">Use `sass/bootstrap.scss` to import variable overrides before the Bootstrap source.</p>
+            <pre class="p-3 bg-light rounded-4"><code>@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="card shadow-soft p-4 mb-5">
+        <h2 class="h5 fw-bold mb-3">Custom Sass styles</h2>
+        <p class="text-muted">Add project-specific styles in `sass/custom.scss` and compile your theme into `css/style.css`.</p>
+        <pre class="p-3 bg-light rounded-4"><code>.hero-gradient {
+  background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+}
+
+.btn-theme {
+  background: rgba(79, 70, 229, 0.1);
+  border-radius: 50px;
+}</code></pre>
+      </section>
+
+      <section class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-soft p-4 text-center">
+            <span class="badge bg-primary mb-3">Primary</span>
+            <p class="text-muted">Primary branding color.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-soft p-4 text-center">
+            <span class="badge bg-success mb-3">Success</span>
+            <p class="text-muted">Positive state and confirmation styling.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-soft p-4 text-center">
+            <span class="badge bg-secondary mb-3">Custom</span>
+            <p class="text-muted">Use Sass to tune your theme and utility classes.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-4 bg-white text-center text-muted">
+    <div class="container">&copy; 2026 Bootstrap 5 Master Practice Project</div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

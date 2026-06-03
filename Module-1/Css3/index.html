@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Internal CSS -->
+    <style>
+        /* Fallback styles and resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- =============================================
+         HEADER SECTION
+         ============================================= -->
+    <header id="mainHeader">
+        <div class="header-container">
+            <div class="logo">
+                <h1 style="color: #e74c3c;">🎉 Community Event Portal</h1>
+            </div>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- =============================================
+         NAVIGATION BAR
+         ============================================= -->
+    <nav id="navbar" class="navbar">
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#events" class="nav-link">Events</a></li>
+            <li><a href="#bulletin" class="nav-link">News</a></li>
+            <li><a href="#registration" class="nav-link">Register</a></li>
+            <li><a href="#admin-table" class="nav-link">Admin</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- =============================================
+         MAIN CONTENT
+         ============================================= -->
+    <main>
+        <!-- Hero Banner Section -->
+        <section id="home" class="hero-banner">
+            <div class="hero-content">
+                <h2>Welcome to Your Community Hub</h2>
+                <p>Discover and participate in exciting local events</p>
+                <button class="cta-button" onclick="scrollToSection('#events')">Explore Events</button>
+            </div>
+        </section>
+
+        <!-- =============================================
+             UPCOMING EVENTS SECTION
+             ============================================= -->
+        <section id="events" class="events-section">
+            <div class="section-header">
+                <h2>Upcoming Events</h2>
+                <p class="section-subtitle">Join us for amazing community activities</p>
+            </div>
+
+            <div class="events-container">
+                <!-- Event Card 1 -->
+                <article class="eventCard">
+                    <div class="event-image-placeholder">🎵</div>
+                    <h3>Annual Music Festival</h3>
+                    <p class="event-description">
+                        Join us for a day of live music featuring local artists. Food vendors, entertainment, and family-friendly activities available throughout the day.
+                    </p>
+                    <div class="event-details">
+                        <span class="detail-item">📅 June 15, 2026</span>
+                        <span class="detail-item">📍 Central Park</span>
+                    </div>
+                    <button class="event-button" onclick="alert('✨ You registered for Annual Music Festival!')">Register Now</button>
+                </article>
+
+                <!-- Event Card 2 -->
+                <article class="eventCard">
+                    <div class="event-image-placeholder">🍲</div>
+                    <h3>Food Donation Drive</h3>
+                    <p class="event-description">
+                        Help us support local families in need. Donate non-perishable food items or volunteer to help distribute meals to the community.
+                    </p>
+                    <div class="event-details">
+                        <span class="detail-item">📅 June 18, 2026</span>
+                        <span class="detail-item">📍 Community Center</span>
+                    </div>
+                    <button class="event-button" onclick="alert('✨ You registered for Food Donation Drive!')">Register Now</button>
+                </article>
+
+                <!-- Event Card 3 -->
+                <article class="eventCard">
+                    <div class="event-image-placeholder">🏃</div>
+                    <h3>5K Community Marathon</h3>
+                    <p class="event-description">
+                        Run or walk 5 kilometers through our beautiful neighborhood. All fitness levels welcome. Refreshments and medals for all participants.
+                    </p>
+                    <div class="event-details">
+                        <span class="detail-item">📅 June 22, 2026</span>
+                        <span class="detail-item">📍 Riverside Trail</span>
+                    </div>
+                    <button class="event-button" onclick="alert('✨ You registered for 5K Community Marathon!')">Register Now</button>
+                </article>
+
+                <!-- Event Card 4 -->
+                <article class="eventCard">
+                    <div class="event-image-placeholder">🎨</div>
+                    <h3>Art Workshop</h3>
+                    <p class="event-description">
+                        Learn painting and drawing techniques from professional artists. All materials provided. No prior experience necessary. Perfect for all ages.
+                    </p>
+                    <div class="event-details">
+                        <span class="detail-item">📅 June 25, 2026</span>
+                        <span class="detail-item">📍 Art Studio Building</span>
+                    </div>
+                    <button class="event-button" onclick="alert('✨ You registered for Art Workshop!')">Register Now</button>
+                </article>
+
+                <!-- Event Card 5 -->
+                <article class="eventCard">
+                    <div class="event-image-placeholder">🩸</div>
+                    <h3>Blood Donation Camp</h3>
+                    <p class="event-description">
+                        Save lives by donating blood. Professional medical staff will be present. Refreshments served. Donor kits provided to all participants.
+                    </p>
+                    <div class="event-details">
+                        <span class="detail-item">📅 June 28, 2026</span>
+                        <span class="detail-item">📍 Hospital Auditorium</span>
+                    </div>
+                    <button class="event-button" onclick="alert('✨ You registered for Blood Donation Camp!')">Register Now</button>
+                </article>
+
+                <!-- Event Card 6 -->
+                <article class="eventCard">
+                    <div class="event-image-placeholder">👶</div>
+                    <h3>Kids Summer Camp</h3>
+                    <p class="event-description">
+                        A fun-filled summer experience for children ages 5-12. Activities include sports, crafts, science experiments, and outdoor adventures.
+                    </p>
+                    <div class="event-details">
+                        <span class="detail-item">📅 July 1-15, 2026</span>
+                        <span class="detail-item">📍 Community Grounds</span>
+                    </div>
+                    <button class="event-button" onclick="alert('✨ You registered for Kids Summer Camp!')">Register Now</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- =============================================
+             COMMUNITY BULLETIN SECTION
+             ============================================= -->
+        <section id="bulletin" class="bulletin-section">
+            <div class="section-header">
+                <h2>Community News & Bulletin</h2>
+                <p class="section-subtitle">Stay updated with the latest community news</p>
+            </div>
+
+            <div class="bulletin-content">
+                <article class="bulletin-article">
+                    <h3>Local Park Renovation Project Begins</h3>
+                    <p>
+                        The much-anticipated renovation of Riverside Park has officially commenced this month. Construction is expected to take 6-8 weeks and will include new walking trails, upgraded playground equipment, improved landscaping, and enhanced accessibility features. During this period, some areas of the park will be temporarily closed. We appreciate your patience and support as we work to create a more beautiful community space for everyone to enjoy.
+                    </p>
+                </article>
+
+                <article class="bulletin-article">
+                    <h3>New Community Center Opens Downtown</h3>
+                    <p>
+                        We are thrilled to announce the grand opening of our new Community Center located in the downtown district. This state-of-the-art facility features a fully equipped gym, swimming pool, dance studios, meeting rooms, and a cafeteria. The center is designed to serve people of all ages with various fitness and educational programs. The first month will feature special discounted memberships. Join us for the opening ceremony celebration with free activities, demonstrations, and refreshments.
+                    </p>
+                </article>
+
+                <article class="bulletin-article">
+                    <h3>Environmental Cleanup Initiative Recruitment</h3>
+                    <p>
+                        Our community is launching a comprehensive environmental cleanup initiative to keep our neighborhoods clean and green. We are recruiting volunteers for monthly cleanup drives on the first Saturday of each month. Whether you want to participate in street cleanups, park maintenance, or water conservation projects, there's a role for everyone. Training is provided, and all materials are supplied. Together, we can create a cleaner, healthier, and more sustainable community for our children and future generations.
+                    </p>
+                </article>
+
+                <article class="bulletin-article">
+                    <h3>Youth Scholarship Program Now Open</h3>
+                    <p>
+                        The Community Foundation is pleased to announce that applications are now open for the annual Youth Scholarship Program. We are offering scholarships up to $5,000 for deserving high school and college students pursuing higher education. Applicants should demonstrate academic excellence, community involvement, and financial need. The application deadline is July 31, 2026. Winners will be announced in August and will have the opportunity to attend a recognition ceremony celebrating their achievements.
+                    </p>
+                </article>
+
+                <article class="bulletin-article">
+                    <h3>Small Business Support Workshop Series</h3>
+                    <p>
+                        Aspiring entrepreneurs and small business owners are invited to our comprehensive workshop series designed to help you start and grow your business. Topics include business planning, financial management, marketing strategies, digital presence, and networking opportunities. Workshops are held every Wednesday evening at the Community Center. Early registration is recommended as spaces fill up quickly. All workshops are free for community members, and light refreshments will be provided.
+                    </p>
+                </article>
+
+                <article class="bulletin-article">
+                    <h3>Senior Wellness Program Expansion</h3>
+                    <p>
+                        The Senior Wellness Program is expanding with new activities and services designed specifically for our senior community members. Activities include gentle yoga classes, walking groups, computer literacy classes, health seminars, and social gatherings. We believe in promoting healthy aging and maintaining an active lifestyle. All programs are accessible, affordable, and designed with seniors in mind. For more information and registration, visit the Community Center or call our senior services hotline.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- =============================================
+             EVENT REGISTRATION FORM SECTION
+             ============================================= -->
+        <section id="registration" class="registration-section">
+            <div class="section-header">
+                <h2>Event Registration Form</h2>
+                <p class="section-subtitle">Register for our upcoming events</p>
+            </div>
+
+            <form class="registration-form" onsubmit="handleFormSubmit(event)">
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        placeholder="Enter your full name" 
+                        required
+                        aria-label="Enter your full name"
+                    >
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Enter your email address" 
+                        required
+                        aria-label="Enter your email address"
+                    >
+                </div>
+
+                <!-- Phone Field -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="Enter your phone number" 
+                        required
+                        aria-label="Enter your phone number"
+                    >
+                </div>
+
+                <!-- Event Selection -->
+                <div class="form-group">
+                    <label for="eventSelect">Select Event</label>
+                    <select id="eventSelect" name="eventSelect" required aria-label="Select an event">
+                        <option value="">Choose an event...</option>
+                        <option value="music-festival">Annual Music Festival</option>
+                        <option value="food-drive">Food Donation Drive</option>
+                        <option value="marathon">5K Community Marathon</option>
+                        <option value="art-workshop">Art Workshop</option>
+                        <option value="blood-donation">Blood Donation Camp</option>
+                        <option value="summer-camp">Kids Summer Camp</option>
+                    </select>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="form-group checkbox">
+                    <input 
+                        type="checkbox" 
+                        id="newsletter" 
+                        name="newsletter"
+                        aria-label="Subscribe to newsletter"
+                    >
+                    <label for="newsletter">Subscribe to our newsletter for updates</label>
+                </div>
+
+                <!-- Message Textarea -->
+                <div class="form-group">
+                    <label for="message">Additional Comments</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="5" 
+                        placeholder="Share any additional information or questions..."
+                        aria-label="Enter additional comments"
+                    ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-button">Submit Registration</button>
+            </form>
+        </section>
+
+        <!-- =============================================
+             VISIBILITY AND DISPLAY DEMO BOXES
+             ============================================= -->
+        <section class="demo-section">
+            <h2>Box Model Demonstration</h2>
+            
+            <div class="demo-container">
+                <!-- Visibility Hidden Box -->
+                <div class="demo-box-container">
+                    <h3>Visibility: Hidden</h3>
+                    <p class="demo-description">
+                        The box below has visibility: hidden. It takes up space but is invisible.
+                    </p>
+                    <div class="demo-box visible-hidden">
+                        This box is hidden but takes up space
+                    </div>
+                    <p class="demo-note">Notice the empty space where this box is located.</p>
+                </div>
+
+                <!-- Display None Box -->
+                <div class="demo-box-container">
+                    <h3>Display: None</h3>
+                    <p class="demo-description">
+                        The box below has display: none. It does not take up any space.
+                    </p>
+                    <div class="demo-box display-none">
+                        This box is not displayed and takes no space
+                    </div>
+                    <p class="demo-note">This box is completely removed from the page flow.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             ADMIN EVENTS TABLE SECTION
+             ============================================= -->
+        <section id="admin-table" class="admin-section">
+            <div class="section-header">
+                <h2>Admin Events Dashboard</h2>
+                <p class="section-subtitle">Manage and monitor all community events</p>
+            </div>
+
+            <div class="table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Annual Music Festival</td>
+                            <td>June 15, 2026</td>
+                            <td>Central Park</td>
+                            <td class="status-confirmed">Confirmed</td>
+                        </tr>
+                        <tr>
+                            <td>Food Donation Drive</td>
+                            <td>June 18, 2026</td>
+                            <td>Community Center</td>
+                            <td class="status-confirmed">Confirmed</td>
+                        </tr>
+                        <tr>
+                            <td>5K Community Marathon</td>
+                            <td>June 22, 2026</td>
+                            <td>Riverside Trail</td>
+                            <td class="status-pending">Pending</td>
+                        </tr>
+                        <tr>
+                            <td>Art Workshop</td>
+                            <td>June 25, 2026</td>
+                            <td>Art Studio Building</td>
+                            <td class="status-confirmed">Confirmed</td>
+                        </tr>
+                        <tr>
+                            <td>Blood Donation Camp</td>
+                            <td>June 28, 2026</td>
+                            <td>Hospital Auditorium</td>
+                            <td class="status-confirmed">Confirmed</td>
+                        </tr>
+                        <tr>
+                            <td>Kids Summer Camp</td>
+                            <td>July 1-15, 2026</td>
+                            <td>Community Grounds</td>
+                            <td class="status-pending">Pending</td>
+                        </tr>
+                        <tr>
+                            <td>Senior Wellness Program</td>
+                            <td>Ongoing</td>
+                            <td>Community Center</td>
+                            <td class="status-confirmed">Confirmed</td>
+                        </tr>
+                        <tr>
+                            <td>Environmental Cleanup</td>
+                            <td>First Saturday Monthly</td>
+                            <td>Various Locations</td>
+                            <td class="status-confirmed">Confirmed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- =============================================
+             FOOTER SECTION
+             ============================================= -->
+        <footer id="contact" class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>
+                        The Local Community Event Portal is dedicated to bringing our community together through meaningful events and activities. We believe in creating spaces where people can connect, learn, and grow together.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#bulletin">News</a></li>
+                        <li><a href="#registration">Register</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>
+                        📧 Email: <a href="mailto:info@communityevents.com">info@communityevents.com</a><br>
+                        📞 Phone: <a href="tel:+1-555-0123">(555) 0123</a><br>
+                        📍 Address: 123 Community Street, Your City, ST 12345
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Local Community Event Portal. All rights reserved. | Designed for Community Excellence</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>

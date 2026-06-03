@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse community events with filters, search, schedule, and category sections.">
+  <title>Events - Local Community Event Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    .schedule-table th,
+    .schedule-table td {
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 0.75rem;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__wrapper">
+      <a href="index.html" class="brand">Event Portal</a>
+      <button class="menu-toggle" id="menuToggleEvents" aria-expanded="false" aria-controls="mainNavEvents">Menu</button>
+      <nav class="main-nav" id="mainNavEvents">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggleEvents">Theme</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header" aria-labelledby="eventsTitle">
+      <div class="container">
+        <h1 id="eventsTitle">Local Events Calendar</h1>
+        <p>Filter by category, search for keywords, and learn more about nearby community happenings.</p>
+      </div>
+    </section>
+
+    <section class="event-filters container" aria-label="Event filters">
+      <div class="filter-group">
+        <label for="searchInput">Search events</label>
+        <input type="search" id="searchInput" placeholder="Search by name or location" aria-label="Search events">
+      </div>
+      <div class="filter-group">
+        <label for="categorySelect">Category</label>
+        <select id="categorySelect" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+          <option value="community">Community</option>
+          <option value="volunteer">Volunteer</option>
+          <option value="music">Music</option>
+          <option value="wellness">Wellness</option>
+          <option value="education">Education</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="container" id="eventCardsSection">
+      <div class="grid cards-grid" id="eventCards"></div>
+    </section>
+
+    <section class="container schedule-section" aria-labelledby="scheduleTitle">
+      <div class="section-heading">
+        <h2 id="scheduleTitle">Weekly Event Schedule</h2>
+      </div>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Event</th>
+            <th>Time</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Neighborhood Meetup</td>
+            <td>6:00 PM</td>
+            <td>Community Center</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Garden Club</td>
+            <td>5:00 PM</td>
+            <td>Green Park</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Outdoor Concert</td>
+            <td>7:30 PM</td>
+            <td>River Walk</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>Volunteer Cleanup</td>
+            <td>9:00 AM</td>
+            <td>Eastside Plaza</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <aside class="container aside-panel" aria-labelledby="categoryInfoTitle">
+      <h2 id="categoryInfoTitle">Event Categories</h2>
+      <dl>
+        <dt>Community</dt>
+        <dd>Fun events and social activities for all ages.</dd>
+        <dt>Volunteer</dt>
+        <dd>Give back by joining cleanup, planting, and support programs.</dd>
+        <dt>Music</dt>
+        <dd>Live performances, open stages, and local band showcases.</dd>
+        <dt>Wellness</dt>
+        <dd>Fitness classes, mindfulness workshops, and support groups.</dd>
+        <dt>Education</dt>
+        <dd>Workshops, learning sessions, and maker meetups.</dd>
+      </dl>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__wrapper">
+      <p>Explore events, save your favorites, and register with confidence.</p>
+      <a href="register.html" class="btn">Register Now</a>
+    </div>
+  </footer>
+
+  <script src="js/events.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

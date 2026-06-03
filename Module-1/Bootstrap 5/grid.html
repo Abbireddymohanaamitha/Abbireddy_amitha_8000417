@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid Exercises | Bootstrap 5 Master Practice Project</title>
+  <meta name="description" content="Bootstrap responsive grid layout examples.">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="index.html">Bootstrap5 Master</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#gridNavbar" aria-controls="gridNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="gridNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="grid.html">Grid</a></li>
+            <li class="nav-item"><a class="nav-link" href="forms.html">Forms</a></li>
+            <li class="nav-item"><a class="nav-link" href="buttons.html">Buttons</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-9">
+          <p class="section-heading text-primary mb-2">Grid layout</p>
+          <h1 class="fw-bold">Responsive grid exercises</h1>
+          <p class="text-muted">Practice using Bootstrap's grid classes, containers, rows, and responsive column layouts for mobile, tablet, and desktop views.</p>
+        </div>
+      </div>
+
+      <section class="mb-5">
+        <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card p-4 shadow-soft h-100">
+              <h5 class="fw-bold">3-column responsive layout</h5>
+              <p class="text-muted">Uses a single row with three responsive columns that stack on mobile and display in columns on desktop.</p>
+              <div class="row g-3 mt-3">
+                <div class="col-12 col-sm-6 col-lg-4"><div class="p-3 border rounded-3 bg-white text-center">Column 1</div></div>
+                <div class="col-12 col-sm-6 col-lg-4"><div class="p-3 border rounded-3 bg-white text-center">Column 2</div></div>
+                <div class="col-12 col-sm-6 col-lg-4"><div class="p-3 border rounded-3 bg-white text-center">Column 3</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card p-4 shadow-soft h-100">
+              <h5 class="fw-bold">Responsive container example</h5>
+              <p class="text-muted">Uses `.container` and `.row` to create consistent spacing across viewports.</p>
+              <div class="container p-3 bg-light rounded-3">
+                <p class="mb-0">This example uses a responsive container.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card p-4 shadow-soft h-100">
+              <h5 class="fw-bold">Column size utilities</h5>
+              <p class="text-muted">Demonstrates `.col-` classes for flexible column widths on different breakpoints.</p>
+              <div class="row g-3 mt-3">
+                <div class="col-12 col-sm-4"><div class="p-3 border rounded-3 bg-white text-center">col-sm-4</div></div>
+                <div class="col-12 col-sm-4"><div class="p-3 border rounded-3 bg-white text-center">col-sm-4</div></div>
+                <div class="col-12 col-sm-4"><div class="p-3 border rounded-3 bg-white text-center">col-sm-4</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4">
+        <div class="col-lg-6">
+          <div class="card p-4 shadow-soft">
+            <h2 class="h5 fw-bold">Sidebar and content layout</h2>
+            <p class="text-muted">Use `col-md-3` for a sidebar and `col-md-9` for the main content on medium and larger screens.</p>
+            <div class="row mt-4">
+              <div class="col-12 col-md-3">
+                <div class="p-3 border rounded-3 bg-light text-center">Sidebar</div>
+              </div>
+              <div class="col-12 col-md-9">
+                <div class="p-3 border rounded-3 bg-white">Main content area that spans 9 columns on desktop and full width on mobile.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card p-4 shadow-soft">
+            <h2 class="h5 fw-bold">Equal column groups</h2>
+            <p class="text-muted">Create four equal columns with `col-sm-3` so they stack nicely on smaller screens.</p>
+            <div class="row mt-4 g-3">
+              <div class="col-6 col-sm-3"><div class="p-3 border rounded-3 text-center">1</div></div>
+              <div class="col-6 col-sm-3"><div class="p-3 border rounded-3 text-center">2</div></div>
+              <div class="col-6 col-sm-3"><div class="p-3 border rounded-3 text-center">3</div></div>
+              <div class="col-6 col-sm-3"><div class="p-3 border rounded-3 text-center">4</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4 mt-5">
+        <div class="col-lg-6">
+          <div class="card p-4 shadow-soft">
+            <h2 class="h5 fw-bold">Alignment utilities</h2>
+            <p class="text-muted">Use `justify-content-center` and `align-items-center` to center columns.</p>
+            <div class="row gx-3 align-items-center justify-content-center mt-4" style="min-height:220px; background:#f8f9fa; border-radius:1rem;">
+              <div class="col-8 col-md-4"><div class="p-3 border rounded-3 text-center bg-white">Centered</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card p-4 shadow-soft">
+            <h2 class="h5 fw-bold">Reordering columns</h2>
+            <p class="text-muted">Demonstrates `order-md-1` and `order-md-2` for responsive content order changes.</p>
+            <div class="row mt-4 g-3">
+              <div class="col-12 col-md-6 order-md-2"><div class="p-3 border rounded-3 bg-white">Content on mobile appears first, desktop second.</div></div>
+              <div class="col-12 col-md-6 order-md-1"><div class="p-3 border rounded-3 bg-light">Sidebar style or callout.</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-4 bg-white text-center text-muted">
+    <div class="container">&copy; 2026 Bootstrap 5 Master Practice Project</div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

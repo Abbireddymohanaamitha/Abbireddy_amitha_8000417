@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utilities | Bootstrap 5 Master Practice Project</title>
+  <meta name="description" content="Bootstrap utilities and responsive visibility examples.">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="index.html">Bootstrap5 Master</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#utilNavbar" aria-controls="utilNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="utilNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="utilities.html">Utilities</a></li>
+            <li class="nav-item"><a class="nav-link" href="plugins.html">Plugins</a></li>
+            <li class="nav-item"><a class="nav-link" href="sass-customization.html">Sass</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <p class="section-heading text-primary mb-2">Utilities</p>
+          <h1 class="fw-bold">Bootstrap spacing, colors, visibility, borders, and positioning utilities</h1>
+          <p class="text-muted">Practice the utility classes that make Bootstrap layouts flexible and production-ready with minimal custom CSS.</p>
+        </div>
+      </div>
+
+      <section class="row g-4 mb-5">
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4">
+            <h2 class="h5 fw-bold mb-3">Spacing utilities</h2>
+            <p class="text-muted">Use margins and padding utility classes like <code>m-3</code>, <code>mt-4</code>, <code>p-2</code>, and <code>py-5</code>.</p>
+            <div class="p-5 bg-light rounded-4 mb-3">
+              <p class="mb-0">This box uses <code>p-5</code> padding, and the container below uses <code>mt-4</code> spacing.</p>
+            </div>
+            <div class="mt-4 p-3 border rounded-3">Content with <code>mt-4</code> and border spacing.</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4">
+            <h2 class="h5 fw-bold mb-3">Dashboard spacing</h2>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <div class="card price-card p-4 bg-white h-100">
+                  <h5 class="fw-bold">Starter</h5>
+                  <p class="text-muted">A pricing card with proper spacing and shadow.</p>
+                  <p class="display-6 mb-3">$19</p>
+                  <a href="#" class="btn btn-primary btn-theme">Choose plan</a>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card price-card p-4 bg-white h-100">
+                  <h5 class="fw-bold">Pro</h5>
+                  <p class="text-muted">A premium pricing section with spacing utilities.</p>
+                  <p class="display-6 mb-3">$49</p>
+                  <a href="#" class="btn btn-outline-primary btn-theme">Choose plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4 mb-5">
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Colors and backgrounds</h2>
+            <div class="row g-3">
+              <div class="col-sm-6"><div class="p-4 bg-primary text-white rounded-4">bg-primary</div></div>
+              <div class="col-sm-6"><div class="p-4 bg-success text-white rounded-4">bg-success</div></div>
+              <div class="col-sm-6"><div class="p-4 bg-warning text-dark rounded-4">bg-warning</div></div>
+              <div class="col-sm-6"><div class="p-4 bg-danger text-white rounded-4">bg-danger</div></div>
+            </div>
+            <div class="p-4 mt-4 bg-dark text-white rounded-4 bg-gradient">bg-dark + bg-gradient</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Display and visibility</h2>
+            <p class="text-muted">Use classes like <code>d-none</code>, <code>d-md-block</code>, and <code>d-lg-flex</code> to control visibility.</p>
+            <div class="d-none d-md-block p-3 bg-primary text-white rounded-4 mb-3">This box is hidden below md and visible on md+</div>
+            <div class="d-none d-lg-flex align-items-center justify-content-center p-3 bg-info text-dark rounded-4">This box is visible only on large screens and above.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4 mb-5">
+        <div class="col-md-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Borders and rounded corners</h2>
+            <div class="p-4 border border-primary border-3 rounded-circle text-center mb-4" style="width:120px; height:120px; display:inline-flex; align-items:center; justify-content:center;">Circle</div>
+            <div class="p-4 shadow rounded-pill">Rounded pill container with soft shadow.</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Positioning utilities</h2>
+            <div class="position-relative bg-light rounded-4 p-4" style="min-height:220px;">
+              <div class="position-absolute top-0 end-0 badge bg-primary rounded-pill p-3">Badge</div>
+              <p class="mb-0">A responsive overlay badge using <code>position-relative</code> and <code>position-absolute</code>.</p>
+            </div>
+            <div class="position-fixed bottom-0 start-0 m-4 p-3 bg-white border rounded-4 shadow d-none d-md-inline-block">Fixed footer note</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4">
+        <div class="col-lg-4 d-none d-md-block">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Responsive sidebar</h2>
+            <p class="text-muted">Visible only on tablets and larger with <code>d-none d-md-block</code>.</p>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><i class="bi bi-check2 me-2 text-success"></i>Navigation</li>
+              <li class="mb-2"><i class="bi bi-check2 me-2 text-success"></i>Profile</li>
+              <li><i class="bi bi-check2 me-2 text-success"></i>Settings</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Responsive sidebar layout</h2>
+            <p class="text-muted">This section demonstrates a sidebar visible on desktop and tablet screens while hiding on mobile.</p>
+            <div class="row g-3">
+              <div class="col-12 col-lg-4 d-none d-md-block">
+                <div class="p-4 bg-white rounded-4 shadow-soft">Sidebar block</div>
+              </div>
+              <div class="col-12 col-lg-8">
+                <div class="p-4 bg-light rounded-4">Main content area adapts to screen size and full-width on mobile.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-4 bg-white text-center text-muted">
+    <div class="container">&copy; 2026 Bootstrap 5 Master Practice Project</div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

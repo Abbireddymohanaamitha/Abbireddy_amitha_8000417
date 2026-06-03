@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buttons | Bootstrap 5 Master Practice Project</title>
+  <meta name="description" content="Bootstrap button styles and groups.">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="index.html">Bootstrap5 Master</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#buttonNavbar" aria-controls="buttonNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="buttonNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="buttons.html">Buttons</a></li>
+            <li class="nav-item"><a class="nav-link" href="navbar.html">Navbar</a></li>
+            <li class="nav-item"><a class="nav-link" href="utilities.html">Utilities</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <p class="section-heading text-primary mb-2">Buttons</p>
+          <h1 class="fw-bold">Bootstrap button styles and groups</h1>
+          <p class="text-muted">Practice with varied button classes, outline states, button groups, and toggle button controls.</p>
+        </div>
+      </div>
+
+      <section class="card shadow-soft p-4 mb-5">
+        <h2 class="h5 fw-bold mb-3">Button variations</h2>
+        <p class="text-muted mb-4">Use the full Bootstrap palette with solid and outline button classes.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-success">Success</button>
+          <button class="btn btn-danger">Danger</button>
+          <button class="btn btn-warning text-dark">Warning</button>
+          <button class="btn btn-info text-dark">Info</button>
+          <button class="btn btn-dark">Dark</button>
+          <button class="btn btn-light border">Light</button>
+        </div>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <button class="btn btn-outline-primary">Outline Primary</button>
+          <button class="btn btn-outline-secondary">Outline Secondary</button>
+          <button class="btn btn-outline-success">Outline Success</button>
+          <button class="btn btn-outline-danger">Outline Danger</button>
+          <button class="btn btn-outline-warning text-dark">Outline Warning</button>
+          <button class="btn btn-outline-info text-dark">Outline Info</button>
+        </div>
+      </section>
+
+      <section class="row g-4">
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Button group</h2>
+            <p class="text-muted">Group buttons for related actions and create segmented controls for navigation states.</p>
+            <div class="btn-group" role="group" aria-label="Button group example">
+              <button type="button" class="btn btn-outline-primary">Left</button>
+              <button type="button" class="btn btn-outline-primary">Middle</button>
+              <button type="button" class="btn btn-outline-primary">Right</button>
+            </div>
+            <div class="btn-group btn-group-lg mt-4" role="group" aria-label="Large button group">
+              <button type="button" class="btn btn-primary">Large</button>
+              <button type="button" class="btn btn-secondary">Group</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Toggle buttons</h2>
+            <p class="text-muted">Use button toggles and checkbox-style buttons for interactive selection states.</p>
+            <div class="btn-group" role="group" aria-label="Toggle buttons">
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+              <label class="btn btn-outline-success" for="btnradio1">Active</label>
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+              <label class="btn btn-outline-success" for="btnradio2">Option 2</label>
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+              <label class="btn btn-outline-success" for="btnradio3">Option 3</label>
+            </div>
+            <div class="btn-group mt-4" role="group" aria-label="Checkbox toggle buttons">
+              <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+              <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+              <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+              <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-4 bg-white text-center text-muted">
+    <div class="container">&copy; 2026 Bootstrap 5 Master Practice Project</div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

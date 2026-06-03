@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plugins | Bootstrap 5 Master Practice Project</title>
+  <meta name="description" content="Bootstrap JavaScript plugin examples.">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="index.html">Bootstrap5 Master</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#pluginNavbar" aria-controls="pluginNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="pluginNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="plugins.html">Plugins</a></li>
+            <li class="nav-item"><a class="nav-link" href="cards.html">Cards</a></li>
+            <li class="nav-item"><a class="nav-link" href="navbar.html">Navbar</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <p class="section-heading text-primary mb-2">JavaScript Plugins</p>
+          <h1 class="fw-bold">Bootstrap modal, accordion, collapse, tooltip, and toast examples</h1>
+          <p class="text-muted">Build interactive UI components with Bootstrap JavaScript behavior and minimal custom code.</p>
+        </div>
+      </div>
+
+      <section class="row g-4 mb-5">
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Modal popup</h2>
+            <p class="text-muted">Trigger a modal with a button and show a polished popup interaction.</p>
+            <button type="button" class="btn btn-primary btn-theme" data-bs-toggle="modal" data-bs-target="#demoModal">Open modal</button>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Toast notifications</h2>
+            <p class="text-muted">Show toast feedback using a button trigger and Bootstrap toast component.</p>
+            <button type="button" class="btn btn-success btn-theme" data-bs-target="#successToast" data-bs-toggle="toast">Show toast</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4 mb-5">
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Accordion component</h2>
+            <div class="accordion" id="exampleAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Collapsible item #1</button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#exampleAccordion">
+                  <div class="accordion-body">This is the first item content.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Collapsible item #2</button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#exampleAccordion">
+                  <div class="accordion-body">This is the second item content.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Collapse and tooltip</h2>
+            <p class="text-muted">Toggle additional content and show tooltip hints for controls.</p>
+            <p><a class="btn btn-outline-info btn-theme" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Toggle content</a></p>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body bg-light">This content is revealed using Bootstrap collapse.</div>
+            </div>
+            <button type="button" class="btn btn-secondary btn-theme mt-4" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip example">Hover for tooltip</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="demoModalLabel">Bootstrap Modal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          This modal demonstrates a typical Bootstrap interaction with pop-up content and close controls.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast align-items-center text-bg-primary position-fixed bottom-0 end-0 m-3" role="alert" aria-live="assertive" aria-atomic="true" id="successToast">
+    <div class="d-flex">
+      <div class="toast-body text-white">This is a toast notification.</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+
+  <footer class="py-4 bg-white text-center text-muted">
+    <div class="container">&copy; 2026 Bootstrap 5 Master Practice Project</div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

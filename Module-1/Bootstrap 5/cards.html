@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cards & Media | Bootstrap 5 Master Practice Project</title>
+  <meta name="description" content="Bootstrap cards and media object layout examples.">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="index.html">Bootstrap5 Master</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#cardNavbar" aria-controls="cardNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="cardNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="cards.html">Cards</a></li>
+            <li class="nav-item"><a class="nav-link" href="utilities.html">Utilities</a></li>
+            <li class="nav-item"><a class="nav-link" href="plugins.html">Plugins</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <p class="section-heading text-primary mb-2">Cards & Media</p>
+          <h1 class="fw-bold">Profile cards and media object style layouts</h1>
+          <p class="text-muted">Use Bootstrap cards and flexible media layouts to build profile sections, testimonials, and content blocks.</p>
+        </div>
+      </div>
+
+      <section class="row g-4 mb-5">
+        <div class="col-md-6">
+          <div class="card card-hover shadow-soft h-100">
+            <img src="images/sample1.jpg" class="card-img-top rounded-top" alt="Profile card image">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Professional profile</h5>
+              <p class="card-text text-muted">A modern card uses `card`, `card-body`, `card-title`, and a top image for visual structure.</p>
+              <a href="#" class="btn btn-primary btn-theme">View profile</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card card-hover shadow-soft h-100">
+            <img src="images/banner.jpg" class="card-img-top rounded-top" alt="Wide card image">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Content card</h5>
+              <p class="card-text text-muted">Cards are ideal for feature sections, marketing blocks, and content presentations on any page.</p>
+              <p class="mb-0"><span class="badge bg-success">Live</span> <span class="badge bg-info">New</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card shadow-soft p-4 mb-5">
+        <h2 class="h5 fw-bold mb-3">Media object layout</h2>
+        <p class="text-muted">Create a media style layout using a row with an image on the left and content on the right.</p>
+        <div class="row align-items-center g-4 mt-4">
+          <div class="col-12 col-md-4 text-center text-md-start">
+            <img src="images/profile.jpg" class="rounded-circle profile-thumb border border-3 border-primary" alt="Media profile image">
+          </div>
+          <div class="col-12 col-md-8">
+            <h4 class="fw-bold">Meet the instructor</h4>
+            <p class="text-muted">Use Bootstrap's responsive grid and alignment utilities to position image media and expanded text side by side on larger screens.</p>
+            <ul class="list-unstyled mb-0">
+              <li><i class="bi bi-check2-circle text-success me-2"></i>Responsive media object</li>
+              <li><i class="bi bi-check2-circle text-success me-2"></i>Aligned content and image</li>
+              <li><i class="bi bi-check2-circle text-success me-2"></i>Flexible card styling</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4">
+        <div class="col-md-4">
+          <div class="card text-white bg-primary card-hover shadow-soft h-100">
+            <div class="card-body">
+              <h5 class="card-title">Primary dashboard</h5>
+              <p class="card-text text-white-75">Use contextual backgrounds with white text for contrast.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-white bg-success card-hover shadow-soft h-100">
+            <div class="card-body">
+              <h5 class="card-title">Success message</h5>
+              <p class="card-text text-white-75">Bootstrap makes card color styling easy with background utility classes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-white bg-warning card-hover shadow-soft h-100">
+            <div class="card-body">
+              <h5 class="card-title">Warning status</h5>
+              <p class="card-text text-white-75">Combine utility classes to create on-brand dashboard cards quickly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-4 bg-white text-center text-muted">
+    <div class="container">&copy; 2026 Bootstrap 5 Master Practice Project</div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

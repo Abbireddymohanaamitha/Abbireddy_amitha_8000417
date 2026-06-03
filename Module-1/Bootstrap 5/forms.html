@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forms | Bootstrap 5 Master Practice Project</title>
+  <meta name="description" content="Bootstrap forms and validation examples.">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="index.html">Bootstrap5 Master</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#formNavbar" aria-controls="formNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="formNavbar">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="forms.html">Forms</a></li>
+            <li class="nav-item"><a class="nav-link" href="buttons.html">Buttons</a></li>
+            <li class="nav-item"><a class="nav-link" href="cards.html">Cards</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <p class="section-heading text-primary mb-2">Forms</p>
+          <h1 class="fw-bold">Bootstrap form and validation examples</h1>
+          <p class="text-muted">Practice form controls, input groups, select menus, validation styling, and floating labels in a polished layout.</p>
+        </div>
+      </div>
+
+      <section class="row g-4">
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4">
+            <h2 class="h5 fw-bold mb-3">Registration form</h2>
+            <form class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Jane Doe" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="mb-3">
+                <label for="emailAddress" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com" required>
+                <div class="invalid-feedback">Enter a valid email address.</div>
+              </div>
+              <div class="mb-3">
+                <label for="userRole" class="form-label">Select role</label>
+                <select class="form-select" id="userRole" required>
+                  <option value="">Choose role</option>
+                  <option>Designer</option>
+                  <option>Developer</option>
+                  <option>Product Manager</option>
+                </select>
+                <div class="invalid-feedback">Select a role to continue.</div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                <label class="form-check-label" for="termsCheck">Agree to terms and conditions</label>
+                <div class="invalid-feedback">You must agree before submitting.</div>
+              </div>
+              <div class="mb-3 input-group">
+                <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                <input type="password" class="form-control" placeholder="Password" required>
+                <div class="invalid-feedback">Enter a secure password.</div>
+              </div>
+              <button class="btn btn-primary btn-theme mt-3" type="submit">Register</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4">
+            <h2 class="h5 fw-bold mb-3">Login form</h2>
+            <form class="needs-validation" novalidate>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                <label for="floatingEmail">Email address</label>
+                <div class="invalid-feedback">Please enter your email.</div>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                <label for="floatingPassword">Password</label>
+                <div class="invalid-feedback">Please enter your password.</div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="rememberCheck">
+                  <label class="form-check-label" for="rememberCheck">Remember me</label>
+                </div>
+                <a href="#" class="text-decoration-none">Forgot password?</a>
+              </div>
+              <button class="btn btn-success btn-theme w-100" type="submit">Sign In</button>
+            </form>
+            <div class="mt-4 pt-3 border-top text-center text-muted">
+              <small>Use form-floating and validation feedback for polished login forms.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-4 bg-white text-center text-muted">
+    <div class="container">&copy; 2026 Bootstrap 5 Master Practice Project</div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

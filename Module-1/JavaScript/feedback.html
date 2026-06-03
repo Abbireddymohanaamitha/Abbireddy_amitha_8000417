@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leave feedback about local events, rate experiences, and view comments from neighbors.">
+  <title>Feedback - Local Community Event Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__wrapper">
+      <a href="index.html" class="brand">Event Portal</a>
+      <button class="menu-toggle" id="menuToggleFeedback" aria-expanded="false" aria-controls="mainNavFeedback">Menu</button>
+      <nav class="main-nav" id="mainNavFeedback">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggleFeedback">Theme</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container form-section" aria-labelledby="feedbackTitle">
+      <h1 id="feedbackTitle">Share Your Feedback</h1>
+      <p>Help us improve by rating events and leaving a comment below.</p>
+      <form id="feedbackForm" class="form-card" onsubmit="return validateFeedback()" novalidate>
+        <div class="form-group">
+          <label for="feedbackName">Name</label>
+          <input type="text" id="feedbackName" name="feedbackName" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="feedbackEmail">Email</label>
+          <input type="email" id="feedbackEmail" name="feedbackEmail" placeholder="name@example.com">
+        </div>
+        <fieldset class="form-group">
+          <legend>Rating</legend>
+          <label><input type="radio" name="rating" value="5"> 5 Stars</label>
+          <label><input type="radio" name="rating" value="4"> 4 Stars</label>
+          <label><input type="radio" name="rating" value="3"> 3 Stars</label>
+          <label><input type="radio" name="rating" value="2"> 2 Stars</label>
+          <label><input type="radio" name="rating" value="1"> 1 Star</label>
+        </fieldset>
+        <div class="form-group">
+          <label for="feedbackComments">Comments</label>
+          <textarea id="feedbackComments" name="feedbackComments" rows="5" placeholder="Tell us what you thought"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Submit Feedback</button>
+          <button type="reset" class="btn btn--secondary">Clear Form</button>
+        </div>
+        <p id="feedbackMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+
+    <section class="container comments-section" aria-labelledby="commentsTitle">
+      <h2 id="commentsTitle">Community Comments</h2>
+      <div id="commentsList" class="comments-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__wrapper">
+      <p>Your voice matters. Thank you for being active in our neighborhood.</p>
+    </div>
+  </footer>
+
+  <script src="js/validation.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

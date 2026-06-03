@@ -1,0 +1,73 @@
+/* Additional overrides and custom utility classes */
+
+.light-theme {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.dark-theme {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.shadow-soft {
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+}
+
+.bg-card-soft {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.bg-card-strong {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.icon-button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.icon-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.15);
+}
+
+.footer-link:hover {
+  color: #a5b4fc !important;
+}
+
+.image-overlay {
+  position: relative;
+}
+
+.image-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.1), rgba(15, 23, 42, 0.35));
+  border-radius: 1.25rem;
+}
+
+.card-hero {
+  border-radius: 1.5rem;
+}
+
+.btn-soft {
+  background: rgba(79, 70, 229, 0.1);
+  color: #4f46e5;
+}
+
+.btn-soft:hover {
+  background: rgba(79, 70, 229, 0.18);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #4f46e5, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,959 @@
+/* =====================================================
+   LOCAL COMMUNITY EVENT PORTAL - COMPLETE CSS
+   All CSS exercises and responsive design included
+   ===================================================== */
+
+/* =====================================================
+   UNIVERSAL SELECTOR - Reset styles
+   ===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   ELEMENT SELECTORS - General page styles
+   ===================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Style all h2 elements */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #005AA7;
+}
+
+/* Style all h3 and p elements (Grouping selector) */
+h3,
+p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    letter-spacing: 0.3px;
+}
+
+/* =====================================================
+   HEADER STYLES
+   ===================================================== */
+header#mainHeader {
+    background: linear-gradient(to right, #005AA7, #0077BE);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* =====================================================
+   NAVIGATION STYLES
+   ===================================================== */
+.navbar {
+    background-color: rgba(0, 77, 167, 0.95);
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+    list-style-type: none;
+    list-style-position: inside;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Link states */
+.nav-menu a:link {
+    color: white;
+}
+
+.nav-menu a:visited {
+    color: #e0e0e0;
+}
+
+.nav-menu a:hover {
+    background-color: #e74c3c;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-menu a:active {
+    background-color: #c0392b;
+    color: white;
+}
+
+/* =====================================================
+   HERO BANNER SECTION
+   ===================================================== */
+.hero-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    color: white;
+    padding: 8rem 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* =====================================================
+   CTA BUTTON STYLES
+   ===================================================== */
+.cta-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 10px rgba(231, 76, 60, 0.2);
+}
+
+/* =====================================================
+   SECTION HEADER STYLES
+   ===================================================== */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    background: linear-gradient(to right, #005AA7, #FFFDE4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* =====================================================
+   EVENTS SECTION STYLES
+   ===================================================== */
+.events-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* =====================================================
+   EVENT CARD STYLES (Class selector)
+   ===================================================== */
+.eventCard {
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.eventCard:hover {
+    border-color: #e74c3c;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.event-image-placeholder {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.eventCard h3 {
+    color: #005AA7;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.event-description {
+    color: #666;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.detail-item {
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Event Button */
+.event-button {
+    background: linear-gradient(to right, #005AA7, #0077BE);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.event-button:hover {
+    background: linear-gradient(to right, #0077BE, #005AA7);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 85, 167, 0.3);
+}
+
+.event-button:focus {
+    outline: 3px solid #e74c3c;
+    outline-offset: 2px;
+}
+
+/* =====================================================
+   COMMUNITY BULLETIN SECTION (Multi-column layout)
+   ===================================================== */
+.bulletin-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+}
+
+.bulletin-content {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid #ddd;
+    text-align: justify;
+}
+
+.bulletin-article {
+    break-inside: avoid;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.bulletin-article h3 {
+    color: #005AA7;
+    margin-top: 0;
+}
+
+.bulletin-article p {
+    text-align: justify;
+    color: #666;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+}
+
+/* =====================================================
+   REGISTRATION FORM SECTION
+   ===================================================== */
+.registration-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.registration-form {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+}
+
+/* Form Inputs */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #005AA7;
+    box-shadow: 0 0 8px rgba(0, 85, 167, 0.2);
+    background-color: #f9fbff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+/* Checkbox styling */
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-group.checkbox input {
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.form-group.checkbox label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit-button {
+    background: linear-gradient(to right, #005AA7, #0077BE);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 85, 167, 0.3);
+}
+
+.submit-button:hover {
+    background: linear-gradient(to right, #0077BE, #005AA7);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 85, 167, 0.4);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* =====================================================
+   BOX MODEL DEMONSTRATION SECTION
+   ===================================================== */
+.demo-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.demo-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.demo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.demo-box-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.demo-box-container h3 {
+    color: #005AA7;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.demo-description {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.demo-box {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    margin: 2rem 0;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    border-radius: 6px;
+}
+
+/* Visibility Hidden - Takes up space */
+.demo-box.visible-hidden {
+    visibility: hidden;
+}
+
+/* Display None - Does not take up space */
+.demo-box.display-none {
+    display: none;
+}
+
+.demo-note {
+    color: #e74c3c;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #ffe0e0;
+    border-left: 4px solid #e74c3c;
+    padding-left: 1rem;
+}
+
+/* =====================================================
+   ADMIN TABLE SECTION
+   ===================================================== */
+.admin-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.admin-table th {
+    background: linear-gradient(to right, #005AA7, #0077BE);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.admin-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Zebra striping using nth-child */
+.admin-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.admin-table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #e8f4f8;
+    transition: background-color 0.3s ease;
+}
+
+/* Status colors */
+.status-confirmed {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* =====================================================
+   FOOTER SECTION
+   ===================================================== */
+.footer {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    margin-top: 5rem;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: #ffd700;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+/* Footer links */
+.footer-links {
+    list-style-type: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+.footer-links a:visited {
+    color: #b0b0b0;
+}
+
+.footer-section a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+/* =====================================================
+   RESPONSIVE WEB DESIGN - MEDIA QUERIES
+   ===================================================== */
+
+/* Tablets and medium screens (768px and below) */
+@media (max-width: 768px) {
+    /* Show mobile menu toggle */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    /* Stack navigation vertically */
+    .navbar {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .navbar.active {
+        max-height: 300px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        padding: 0.8rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Reduce font sizes */
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    /* Stack event cards vertically */
+    .events-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Single column for bulletin */
+    .bulletin-content {
+        column-count: 1;
+    }
+
+    /* Adjust spacing for mobile */
+    .hero-banner {
+        padding: 4rem 1.5rem;
+    }
+
+    .registration-form {
+        padding: 1.5rem;
+    }
+
+    /* Reduce table font size */
+    .admin-table th,
+    .admin-table td {
+        padding: 0.7rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Footer grid */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Reduce button padding */
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+
+    .event-button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small screens (480px and below) */
+@media (max-width: 480px) {
+    /* Further reduce font sizes */
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-banner {
+        padding: 2rem 1rem;
+    }
+
+    /* Very small padding for sections */
+    .events-section,
+    .registration-section,
+    .admin-section,
+    .bulletin-section {
+        padding: 0 1rem;
+    }
+
+    /* Stack demo boxes */
+    .demo-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduce table text */
+    .admin-table th,
+    .admin-table td {
+        padding: 0.5rem 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    /* Responsive form */
+    .registration-form {
+        padding: 1rem;
+    }
+
+    /* Full width buttons */
+    .cta-button,
+    .submit-button {
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    .event-button {
+        width: 100%;
+    }
+
+    /* Adjust spacing */
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .events-container,
+    .footer-content {
+        gap: 1rem;
+    }
+}
+
+/* Large screens (1200px and above) - Optimize layout */
+@media (min-width: 1200px) {
+    .events-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .demo-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =====================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ===================================================== */
+
+/* Focus states for keyboard navigation */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+    outline: 3px solid #e74c3c;
+    outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+input,
+textarea,
+select {
+    transition: all 0.3s ease;
+}
+
+/* Skip to main content link (hidden but accessible) */
+.skip-to-main {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #e74c3c;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-to-main:focus {
+    top: 0;
+}
+
+/* =====================================================
+   UTILITY CLASSES
+   ===================================================== */
+
+/* For responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container for consistent max-width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ===================================================== */

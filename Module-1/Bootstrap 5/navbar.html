@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navbar & Navigation | Bootstrap 5 Master Practice Project</title>
+  <meta name="description" content="Bootstrap responsive navbar and navigation examples.">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand text-primary fw-bold" href="index.html">Bootstrap5 Master</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navExample" aria-controls="navExample" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navExample">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="grid.html">Grid</a></li>
+                <li><a class="dropdown-item" href="forms.html">Forms</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="plugins.html">Plugins</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex me-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+          <a class="btn btn-primary" href="index.html">Back Home</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-8">
+          <p class="section-heading text-primary mb-2">Navigation</p>
+          <h1 class="fw-bold">Responsive navbars, tabs, and pills</h1>
+          <p class="text-muted">Build a clean responsive navbar with dropdowns, search, and a mobile-friendly collapse menu.</p>
+        </div>
+      </div>
+
+      <section class="card shadow-soft p-4 mb-5">
+        <h2 class="h5 fw-bold mb-3">Responsive navbar with hamburger</h2>
+        <p class="text-muted">Use Bootstrap's `.navbar-expand-lg` class to switch between horizontal and mobile nav layouts.</p>
+        <div class="alert alert-light" role="alert">Resize the browser window to see the navbar collapse into a mobile menu.</div>
+      </section>
+
+      <section class="row g-4">
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Nav tabs</h2>
+            <p class="text-muted">Use `.nav-tabs` for tabbed navigation sections and active link styling.</p>
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item" role="presentation"><button class="nav-link active" id="tab-home" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" id="tab-profile" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" id="tab-contact" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button></li>
+            </ul>
+            <div class="tab-content p-3 border border-top-0 rounded-bottom">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="tab-home">Home tab content with responsive layout examples.</div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="tab-profile">Profile tab content for user info or card layout.</div>
+              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="tab-contact">Contact tab content with forms and CTA options.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-soft p-4 h-100">
+            <h2 class="h5 fw-bold mb-3">Nav pills</h2>
+            <p class="text-muted">Use `.nav-pills` for pill-shaped navigation and strong active styles.</p>
+            <ul class="nav nav-pills mb-3" role="tablist">
+              <li class="nav-item" role="presentation"><button class="nav-link active" id="pill-home" data-bs-toggle="pill" data-bs-target="#pillHome" type="button" role="tab" aria-controls="pillHome" aria-selected="true">Overview</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" id="pill-services" data-bs-toggle="pill" data-bs-target="#pillServices" type="button" role="tab" aria-controls="pillServices" aria-selected="false">Services</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" id="pill-contact" data-bs-toggle="pill" data-bs-target="#pillContact" type="button" role="tab" aria-controls="pillContact" aria-selected="false">Contact</button></li>
+            </ul>
+            <div class="tab-content border rounded-3 p-3">
+              <div class="tab-pane fade show active" id="pillHome" role="tabpanel" aria-labelledby="pill-home">Pill navigation is ideal for settings, profile menus, and content switching.</div>
+              <div class="tab-pane fade" id="pillServices" role="tabpanel" aria-labelledby="pill-services">Show different service information without page reloads.</div>
+              <div class="tab-pane fade" id="pillContact" role="tabpanel" aria-labelledby="pill-contact">Display contact details, help, or quick links.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-4 bg-white text-center text-muted">
+    <div class="container">&copy; 2026 Bootstrap 5 Master Practice Project</div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

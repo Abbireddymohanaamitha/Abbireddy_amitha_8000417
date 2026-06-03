@@ -1,0 +1,18 @@
+{
+  "name": "bootstrap5-exercises",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bootstrap 5 Master Practice Project with exercises, Sass customization, and JavaScript interactions.",
+  "scripts": {
+    "build:css": "sass sass/bootstrap.scss css/style.css --no-source-map",
+    "watch:css": "sass --watch sass/bootstrap.scss:css/style.css",
+    "start": "start index.html"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.4"
+  },
+  "devDependencies": {
+    "sass": "^1.72.0"
+  }
+}
